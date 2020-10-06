@@ -5,7 +5,11 @@ const DisplayCurrentImage = ({ currentImage }) => {
     <>
       <div className='current-image'>
         <h2>Currently Selected Image</h2>
-        {currentImage ? <img src={currentImage} /> : <p>No Image Selected</p>}
+        {currentImage ? (
+          <img src={currentImage} alt='Selected Image' aria-label='Selected Image' />
+        ) : (
+          <p>No Image Selected</p>
+        )}
       </div>
       <style jsx>{`
         div.current-image {

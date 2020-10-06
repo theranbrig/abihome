@@ -10,9 +10,9 @@ const PastImages = ({ imageHistory, selectCurrentImage }) => {
             <button
               key={idx}
               onClick={() => selectCurrentImage(image)}
-              aria-label={`Select Previous Icon ${idx}`}
+              aria-label={`Select Previous Icon ${idx + 1}`}
             >
-              {idx + 1} <img src={image} />
+              {idx + 1} <img src={image} alt={`Previous Icon ${idx + 1}`} />
             </button>
           ))
         ) : (

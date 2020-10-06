@@ -9,10 +9,10 @@ const ImageList = ({ images, selectCurrentImage, currentImage }) => {
           {images.map((image, idx) => (
             <button
               key={idx}
-              aria-label={`Select Icon ${idx}`}
+              aria-label={`Select Icon ${idx + 1}`}
               onClick={() => selectCurrentImage(image)}
             >
-              <img src={image} alt={`Icon ${idx}`} />
+              <img src={image} alt={`Icon ${idx + 1}`} />
             </button>
           ))}
         </ul>

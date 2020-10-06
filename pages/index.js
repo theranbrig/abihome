@@ -13,7 +13,8 @@ export default function Home() {
   const fetchApiData = () => {
     fetch('https://abihome-test.herokuapp.com/test/images')
       .then((res) => res.json())
-      .then((data) => setImages(data));
+      .then((data) => setImages(data))
+      .catch((err) => console.log(err));
   };
 
   const selectCurrentImage = (image) => {
@@ -33,7 +34,7 @@ export default function Home() {
         <title>Abihome Project</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='main-container'>
+      <main className='main-container' role='main'>
         <ImageList images={images} selectCurrentImage={selectCurrentImage} />
         <div className='display-images-container'>
           <PastImages imageHistory={imageHistory} selectCurrentImage={selectCurrentImage} />
