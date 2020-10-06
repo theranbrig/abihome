@@ -3,7 +3,7 @@ import React from 'react';
 const PastImages = ({ imageHistory, selectCurrentImage }) => {
   return (
     <>
-      <div>
+      <div className='image-history-container'>
         <h2>Previously Selected Images</h2>
         {imageHistory.length ? (
           imageHistory.map((image, idx) => (
@@ -16,11 +16,11 @@ const PastImages = ({ imageHistory, selectCurrentImage }) => {
             </button>
           ))
         ) : (
-          <p>No Previous Image</p>
+          <p>No Previous Images</p>
         )}
       </div>
       <style jsx>{`
-        div {
+        div.image-history-container {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -31,18 +31,18 @@ const PastImages = ({ imageHistory, selectCurrentImage }) => {
           border-top: 1px solid black;
           border-right: 1px solid black;
         }
-        img {
+        .image-history-container img {
           width: 50px;
           display: block;
 
           margin: 5px auto;
         }
-        h2 {
+        .image-history-container h2 {
           font-size: 1.1rem;
           font-weight: 300;
           text-align: center;
         }
-        button {
+        .image-history-container button {
           border: none;
           background-color: transparent;
           border-top: 1px solid black;

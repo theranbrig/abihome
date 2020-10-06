@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Abihome Project</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className='main-container'>

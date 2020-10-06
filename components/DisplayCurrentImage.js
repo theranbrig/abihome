@@ -3,12 +3,12 @@ import React from 'react';
 const DisplayCurrentImage = ({ currentImage }) => {
   return (
     <>
-      <div>
-        <h2>Selected Image</h2>
+      <div className='current-image'>
+        <h2>Currently Selected Image</h2>
         {currentImage ? <img src={currentImage} /> : <p>No Image Selected</p>}
       </div>
       <style jsx>{`
-        div {
+        div.current-image {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -16,10 +16,10 @@ const DisplayCurrentImage = ({ currentImage }) => {
           margin: 0;
           border-top: 1px solid black;
         }
-        img {
+        .current-image img {
           width: 400px;
         }
-        h2 {
+        .current-image h2 {
           font-size: 1.1rem;
           font-weight: 300;
         }
