@@ -22,6 +22,7 @@ const DisplayCurrentImage = ({ currentImage }) => {
         }
         .current-image img {
           width: 400px;
+          max-width: 80%;
         }
         .current-image h2 {
           font-size: 1.1rem;

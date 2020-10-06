@@ -53,6 +53,11 @@ export default function Home() {
           grid-template-columns: 1fr 4fr;
           overflow: hidden;
         }
+        @media only screen and (max-device-width: 768px) {
+          .display-images-container {
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
       <style global jsx>{`
         body {

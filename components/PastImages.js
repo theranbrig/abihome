@@ -49,6 +49,17 @@ const PastImages = ({ imageHistory, selectCurrentImage }) => {
           padding: 5px;
           width: 100%;
         }
+        @media (max-width: 768px) {
+          .image-history-container {
+            flex-direction: row !important;
+            height: 20vh !important;
+            overflow-x: scroll;
+            overflow-y: none;
+          }
+          .image-history-container button {
+            border-top: none;
+          }
+        }
       `}</style>
     </>
   );

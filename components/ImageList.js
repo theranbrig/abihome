@@ -42,6 +42,11 @@ const ImageList = ({ images, selectCurrentImage, currentImage }) => {
           border: none;
           background-color: transparent;
         }
+        @media only screen and (max-device-width: 768px) {
+          .image-list img {
+            height: 40px;
+          }
+        }
       `}</style>
     </>
   );
